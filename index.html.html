@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kevin Shikuku - Portfolio</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+            min-height: 100vh;
+            overflow-y: scroll;
+            scrollbar-width: none; /* Firefox */
+            -ms-overflow-style: none;  /* Internet Explorer 10+ */
+        }
+        body::-webkit-scrollbar { /* WebKit */
+            width: 0;
+            height: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .profile-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            color: #b3b3b3;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+        p {
+            color: #b3b3b3;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            background-color: #3a3a3a;
+            color: #ffffff;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+        .projects {
+            margin-top: 40px;
+        }
+        .project {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 20px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+        .project-icon {
+            width: 50px;
+            height: 50px;
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        .project-info h3 {
+            margin: 0 0 5px 0;
+        }
+        .project-info p {
+            margin: 0;
+            font-size: 14px;
+        }
+        .new-tag {
+            background-color: #ff3e00;
+            color: white;
+            padding: 2px 6px;
+            border-radius: 10px;
+            font-size: 12px;
+            margin-left: 10px;
+        }
+        .menu-items {
+            margin-top: 40px;
+        }
+        .menu-item {
+            background-color: #1e1e1e;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 10px;
+            cursor: pointer;
+        }
+        .menu-item-content {
+            display: none;
+            padding: 10px 0;
+        }
+        .menu-item.active .menu-item-content {
+            display: block;
+        }
+        .menu-item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .menu-item-header::after {
+            content: '+';
+            font-size: 20px;
+        }
+        .menu-item.active .menu-item-header::after {
+            content: '-';
+        }
+
+        @media (max-width: 768px) {
+            .project {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .project-icon {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <img src="/api/placeholder/80/80" alt="Profile" class="profile-img">
+            <div>
+                <h3>Hey there 👋<br>I'm Kevin Shikuku</h3>
+                <p class="subtitle"> -Technopreneur</p>
+            </div>
+        </div>
+        
+        <p>This is actually a free and open-source template for your Personal Portfolio Website built with Astro and TailwindCSS. Create a website with Blog, CV, Project Section, Store and RSS Feed. I hope you find it useful!</p>
+        <a href="#" class="button">LET'S CONNECT!</a>
+        
+        <div class="projects">
+            <h2>My current Projects &lt;/&gt;</h2>
+            <div class="project">
+                <div class="project-icon">A</div>
+                <div class="project-info">
+                    <h3>Faceless YT Channels <span class="new-tag">NEW</span></h3>
+                    <p>I am activly working of faceless YouTube channels, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-icon">B</div>
+                <div class="project-info">
+                    <h3>Demo Project 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="menu-items">
+            <div class="menu-item" data-target="services">
+                <div class="menu-item-header">Services</div>
+                <div class="menu-item-content">
+                    <h4>Here you can list your services...</h4>
+                    <p> I do video editing using Davinci resolve, Capcut PC </p>
+                </div>
+            </div>
+            <div class="menu-item" data-target="store">
+                <div class="menu-item-header">Store</div>
+                <div class="menu-item-content">
+                    <p>Your store items can go here...</p>
+                </div>
+            </div>
+            <div class="menu-item" data-target="blog">
+                <div class="menu-item-header">Blog</div>
+                <div class="menu-item-content">
+                    <p>Work in progress plus email newletter...</p>
+                </div>
+            </div>
+            <div class="menu-item" data-target="cv">
+                <div class="menu-item-header">Resume</div>
+                <div class="menu-item-content">
+                    <p>Your CV details can go here...</p>
+                </div>
+            </div>
+            <div class="menu-item" data-target="contact">
+                <div class="menu-item-header">Contact</div>
+                <div class="menu-item-content">
+                    <p>Email:</p>
+                    <p>Phone:</p>
+                    <p> X/Twiiter: </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuItems = document.querySelectorAll('.menu-item');
+            
+            menuItems.forEach(item => {
+                item.addEventListener('click', function() {
+                    this.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
